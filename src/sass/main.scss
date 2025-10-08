@@ -1,0 +1,156 @@
+@use "variables" as variable;
+@use "mixins" as mixin;
+
+* {
+    box-sizing : border-box;
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    font-family : "Inter", sans-serif;
+    background-color : variable.$background-color;
+    color : variable.$text-color;
+    min-height : 200vh;
+}
+
+header {
+    height : 10vh;
+}
+
+a {
+    color : variable.$text-color;
+    text-decoration : none;
+    transition : color 0.2s;
+}
+
+.navbar {
+    display : fixed;
+    align-items : center;
+    padding : 1.5rem 3rem;
+    position : sticky;
+    top : 0;
+    left : 0;
+    z-index : 100;
+
+    background : rgba(0, 0, 0, 0);
+    backdrop-filter : blur(10px);
+    -webkit-backdrop-filter : blur(10px);
+
+    &-container {
+        display : flex;
+        align-items : center;
+    }
+}
+
+.logo-image {
+    height : 2.2rem;
+    width : auto;
+    display : block;
+}
+
+.logo {
+    margin-right : 3rem;
+}
+
+.nav-links{
+    display: flex;
+    gap : 2rem;
+    font-size : 1rem;
+
+    a {
+        color : #ffffffb3;
+        font-weight : 500;
+
+        &:hover {
+            color : variable.$text-color;
+        }
+
+        &.active {
+            color : variable.$text-color;
+            background-color : variable.$primary-color;
+            padding : 0.5rem 1rem;
+            border-radius : 999px;
+            font-weight : bold;
+        }
+    }
+}
+
+.nav-icons {
+    margin-left : auto;
+    display : flex;
+    gap : 1.5rem;
+    font-size : 1.5rem;
+    cursor : pointer;
+}
+
+.couverture {
+    position : relative;
+    width : 100%;
+    height : 100vh;
+    background-image : url('/affiche_f1.jpeg');
+    background-size : cover;
+    background-position : center center;
+    margin-top : -10vh;
+
+    &::before {
+        content : "";
+        position : absolute;
+        top : 0;
+        left : 0;
+        width : 100%;
+        height : 100%;
+        background : linear-gradient(77deg, #00000099) 0, transparent 85%;
+    }
+}
+
+.affiche {
+    position : absolute;
+    top : 50%;
+    left : 3rem;
+    transform : transalteY(-50%);
+    width : 35%;
+
+    @media (max-width : 1200px){
+        width : 50%;
+    }
+}
+
+.film-title {
+    font-size : 3rem;
+    font-weight : bold;
+    margin-bottom : 0.5rem;
+}
+
+.film-description {
+    font-size : 1.2rem;
+    margin-bottom : 2rem;
+}
+
+.actions {
+    display : flex;
+    gap : 1rem;
+    margin-bottom : 1rem;
+}
+
+.btn {
+    @include mixin.button-style(variable.$button-background-light, variable.$background-color);
+
+    &.bouton-play {
+        background-color : variable.$button-background-light;
+        color : variable.$background-color;
+    }
+
+    &.bouton-information {
+        @include mixin.button-style(variable.$button-background-dark, variable.$text-color);
+    }
+}
+
+.rating {
+    font-size : 1.5rem;
+    color : #ffb900;
+
+    .half {
+        color : #ffb900;
+    }
+}
