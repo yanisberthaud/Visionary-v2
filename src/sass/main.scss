@@ -11,7 +11,7 @@ body {
     font-family : "Inter", sans-serif;
     background-color : variable.$background-color;
     color : variable.$text-color;
-    min-height : 200vh;
+    min-height : 500vh;
 }
 
 header {
@@ -128,16 +128,17 @@ a {
 }
 
 .equilibrage {
+    position : absolute;
+    bottom : 10%;
+    margin-left : 2.5rem;
     display : flex;
-    justify-content : space-between;
     align-items : center;
-    width : 100%;
+    width : 90%;
 }
 
 .actions {
     display : flex;
     gap : 1rem;
-    margin-bottom : 1rem;
 }
 
 .btn {
@@ -157,6 +158,8 @@ a {
     font-size : 1.5rem;
     color : #ffb900;
     display : flex;
+    align-items : center;
+    margin-left : auto;
 
     .half {
         color : #ffb900;
@@ -178,10 +181,15 @@ a {
 .box {
     position : relative;
     overflow : hidden;
+    transition : transform 0.3s ease-in-out;
 
     &-1{
         grid-row-start : 1;
         grid-row-end: 3;
+    }
+
+    &:hover {
+        transform : scale(1.05);
     }
 }
 
@@ -191,4 +199,25 @@ a {
     height : 100%;
     object-fit : cover;
     transition : transform 0.3s ease-in-out;
+}
+
+.ma-liste {
+    margin-left : 41px;
+    font-size : 1.3rem;
+    transition : font-size 0.2s, color 0.2s ease-out;
+    display : inline-block;
+
+    &:hover {
+        color : variable.$text-color;
+        transform : translateX(10px) scale(1.2);
+    }
+
+    &-grid {
+        display : grid;
+        grid-template-columns : 17% 17% 17% 17% 17%;
+        grid-template-rows : 300px;
+        gap : 1.5rem;
+        margin-left : 41px;
+        margin-top : 30px;
+    }
 }
