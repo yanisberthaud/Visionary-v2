@@ -2,12 +2,57 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="png" href="favicon.png" />
-    <link rel="stylesheet" href="src/sass/main.scss" />
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="icon" type="png" href="../../favicon.png" />
+    <link rel="stylesheet" href="../../src/sass/main.scss" />
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=0.7" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title> Films </title>
   </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="logo"> 
+          <img class="logo-image" src="/green_visionary.png" alt="logo Visionary">
+        </div>
+        <nav class="nav-links">
+          <a href="pages/series/series.html"> Séries </a>
+          <a href="pages/films/films.html"> Films </a>
+          <a href="#"> Plus Populaires </a>
+          <a href="pages/ma_liste.html"> Ma liste </a>
+        </nav>
+        <div class="nav-icons">
+          <i class="fas fa-magnifying-glass"></i>
+          <i class="fas fa-bell"></i>
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <a class="ma-liste" href="pages/ma_liste.html"> 
+            <h2 class="gap"> Ma Liste 
+              <i class="fas fa-chevron-right" style="color : #51e351"></i>
+            </h2>
+          </a>
+
+          <div class="defilement">
+            <div class="box-3"> <a href="#"><img class="cover" src="/films/cover_django.jpg" alt="Django"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/films/cover_fury.jpg" alt="Fury"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/series/cover_breaking_bad.jpg" alt="Breaking Bad"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/films/cover_prisoners.jpg" alt="Prisoners"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/series/cover_the_wire.jpg" alt="The Wire"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/films/cover_interstellar.jpg" alt="Interstellar"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/films/cover_blade_runner_2049.jpg" alt="Blade Runner 2049"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/films/cover_goodfellas.jpg" alt="Goodfellas"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/films/cover_the_truman_show.jpg" alt="The Truman Show"></a></div>
+            <div class="box-3"> <a href="#"><img class="cover" src="/series/cover_drive_to_survive.png" alt="Drive To Survive"></a></div>
+          </div>
+      </section>
+    </main>
+
+  </body>
