@@ -1,0 +1,4 @@
+root: C:\Users\marce\Visionary-v2 
+path: C:\Program Files\nodejs 
+arch: 64 
+proxy: none
