@@ -178,13 +178,27 @@ a {
 }
 
 .box {
-    position : relative;
-    overflow : hidden;
-    transition : transform 0.3s ease-in-out;
+    position : relative;    
+    
 
     &-1{
         grid-row-start : 1;
         grid-row-end: 3;
+        transition : transform 0.3s ease-in-out;
+        
+        &:hover {
+            transition : transform 0.3s ease-in-out;
+            transform : scale(1.05);
+        }
+    }
+
+    &-2 {
+        transition : transform 0.3s ease-in-out;
+
+        &:hover{
+            transition : transform 0.3s ease-in-out;
+            transform : scale(1.05);
+        }
     }
 
     &:hover {
@@ -195,12 +209,18 @@ a {
         flex : 0 0 calc(100%/5.5);
         padding : 0 0.5rem;
         box-sizing: border-box;
+        transition : transform 0.3s ease-in-out;
 
         & img {
             width : 100%;
             height : 100%;
             display : block;
             object-fit : cover;
+        }
+
+        &:hover {
+            transition : transform 0.3s ease-in-out;
+            transform : scale(1.05);
         }
     }
 }
@@ -216,20 +236,20 @@ a {
 h2 {
     margin-left : 1.5rem;
     font-size : 1.3rem;
-    transition : font-size 0.2s, color 0.2s ease-out;
+    transition : transform 0.3s ease-in-out;
     display : inline-block;
 
     &:hover {
-        color : variable.$text-color;
-        transform : translateX(10px) scale(1.2);
-    }
+        transition : transform 0.3s ease-in-out;
+        transform : scale(1.1);
+        }
 }
 
 .defilement {
     display : flex;
     overflow-x : scroll;
     overflow-y : hidden;
-    margin : 1.5rem 1.5rem;;
+    padding : 1.5rem 1.5rem;
     
     &::-webkit-scrollbar {
         display : none;
