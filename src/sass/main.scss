@@ -101,6 +101,16 @@ a {
         height : 100%;
         background : linear-gradient(77deg, #00000099) 0, transparent 85%;
     }
+
+    @media(max-width : 768px) {
+        background-image : none;
+        height : auto;
+        width : auto;
+
+        &::before {
+            content : none;
+        }
+    }
 }
 
 .affiche {
@@ -110,8 +120,40 @@ a {
     transform : transalteY(-50%);
     width : 35%;
 
-    @media (max-width : 1200px){
+    @media (max-width : 768px){
+        width : 100%;
+        position : static;
+        display : flex;
+        justify-content : center;
+    }
+
+    &-mobile {
+        display : flex;
+        justify-content : center;
+        width : 100%;
+        margin-top : 5rem;
+        border : 1px solid #ffffff;
+        text-align : center;
+        padding : auto;
+
+        @media (min-width : 768px) {
+            display : none;
+        }
+    }
+
+    &-film {
         width : 50%;
+        border-radius : 16px;
+        padding : 1rem;
+    }
+}
+
+.border {
+    border : 1px solid #ffffff;
+    border-radius : 16px;
+
+    @media(max-width : 768px) {
+        border : none;
     }
 }
 
@@ -119,12 +161,21 @@ a {
     font-size : 3rem;
     font-weight : bold;
     margin-bottom : 0.5rem;
+
+    @media(max-width : 768px) {
+        display : none;
+    }
 }
 
 .film-description {
     font-size : 0.8rem;
     margin-bottom : 2rem;
+
+    @media(max-width : 768px) {
+        display : none;
+    }
 }
+
 
 .equilibrage {
     position : absolute;
@@ -133,11 +184,34 @@ a {
     display : flex;
     align-items : center;
     width : 90%;
+
+    @media(max-width : 768px) {
+        position : static;
+        transform : none;
+        flex-direction : column;
+        align-items : flex-start;
+        width : 100%;
+        margin : 0;
+        padding : 1.5rem 0;
+    }
 }
 
 .actions {
     display : flex;
     gap : 1rem;
+
+    &-mobile {
+        display : flex;
+        gap : 1rem;
+
+        @media(min-width : 768px) {
+            display : none;
+        }
+    }
+
+    @media(max-width : 768px) {
+        display : none;
+    }
 }
 
 .btn {
@@ -167,6 +241,10 @@ a {
     .empty {
         color : #555555;
     }
+
+    @media(max-width : 768px) {
+        display : none;
+    }
 }
 
 .grid {
@@ -175,6 +253,10 @@ a {
     grid-template-rows : repeat(2, 400px);
     gap : 1.5rem;
     padding : 3rem;
+
+    @media(max-width : 768px) {
+        display : none;
+    }
 }
 
 .box {
