@@ -13,10 +13,14 @@
   </head>
   <body>
     <header class="navbar">
-      <div class="navbar-container">
+      <div class="navbar-container">  
         <div class="logo"> 
-          <img class="logo-image" src="/green_visionary.png" alt="logo Visionary">
+          <img class="logo-image" src="/green_visionary.png" alt="Logo Visionary">
         </div>
+        <div class="logo-mobile">
+          <img class="logo-mobile-image" src="favicon.png" alt="Logo Visionary">
+        </div>
+        <h1> Accueil </h1>
         <nav class="nav-links">
           <a href="pages/series/series.html"> Séries </a>
           <a href="pages/films/films.html"> Films </a>
@@ -33,24 +37,24 @@
 
     <main> 
       <section>
+        <div class="bouton-nav-mobile">
+            <a href="pages/films/films.html">
+              <button class="bouton bouton-films">
+                Films
+              </button>
+            </a>
+            <a href="pages/series/series.html">
+              <button class="bouton">
+                Séries
+              </button>
+            </a>
+        </div>
         <div class="couverture">
           <div class="affiche">
             <div class="affiche-mobile">
               <img class="affiche-film" src="series/cover_narcos.png" alt="Narcos">
             </div>
-            <div class="actions-mobile">
-              <a href="https://www.youtube.com/watch?v=OM9-gNn4LWc&t=5s">
-                <button class="btn bouton-play">
-                  <i class="fas fa-play"></i> Lecture
-                </button>
-              </a>
-              <a href="pages/films/details/f1_the_movie.html">
-                <button class="btn bouton-information">
-                  <i class="fas fa-circle-info"></i> Plus d'infos
-                </button>
-              </a>
-            </div>
-            <h1 class="film-title"> F1 - The Movie </h1>
+            <p class="film-title"> F1 - The Movie </p>
             <p class="film-description"> Plongez au cœur de l’adrénaline de la Formule 1 avec F1 The Movie. Quand un ancien prodige blessé 
               revient sur le circuit, il doit guider un jeune talent et sauver son équipe de la faillite. Vitesse, rivalités, et 
               dépassement de soi : chaque virage compte dans cette course pour la rédemption. </p>
@@ -94,7 +98,7 @@
       <section>
           <a class="ma-liste" href="pages/ma_liste.html"> 
             <h2> Ma Liste 
-              <i class="fas fa-chevron-right" style="color : #51e351"></i>
+              <span class="fleche"> <i class="fas fa-chevron-right" style="color : #51e351"></i> </span>
             </h2>
           </a>
 
@@ -115,7 +119,7 @@
       <section>
           <a class="films" href="pages/films/films.html"> 
             <h2> Films 
-              <i class="fas fa-chevron-right" style="color : #51e351"></i>
+              <span class="fleche"> <i class="fas fa-chevron-right" style="color : #51e351"></i> </span>
             </h2>
           </a>
 
@@ -134,7 +138,7 @@
       <section>
           <a class="films" href="pages/series/series.html"> 
             <h2> Séries
-              <i class="fas fa-chevron-right" style="color : #51e351"></i>
+              <span class="fleche"> <i class="fas fa-chevron-right" style="color : #51e351"></i> </span>
             </h2>
           </a>
 

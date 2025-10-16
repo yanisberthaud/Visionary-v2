@@ -40,16 +40,47 @@ a {
         display : flex;
         align-items : center;
     }
-}
 
-.logo-image {
-    height : 2.2rem;
-    width : auto;
-    display : block;
+    @media(max-width : 768px) {
+        padding : 1rem 1.5rem;
+    }
 }
 
 .logo {
     margin-right : 3rem;
+
+    &-image {
+        height : 2.2rem;
+        width : auto;
+        display : block;
+    }
+
+    @media(max-width : 768px) {
+        display : none;
+    }
+
+    &-mobile {
+        @media(min-width : 768px) {
+            display : none;
+        }
+
+        &-image {
+            height : 4rem;
+            width : auto;
+            display : block;
+        }
+    }
+
+}
+
+h1 {
+    font-size : 1.5rem;
+    font-weight : 500;
+    margin-left : 0.5rem;
+
+    @media(min-width : 768px) {
+        display : none;
+    }
 }
 
 .nav-links{
@@ -73,6 +104,10 @@ a {
             font-weight : bold;
         }
     }
+
+    @media(max-width : 768px) {
+        display : none;
+    }
 }
 
 .nav-icons {
@@ -82,6 +117,31 @@ a {
     font-size : 1.5rem;
     cursor : pointer;
 }
+
+.bouton {
+    @include mixin.button-style-mobile(variable.$button-mobile-light, variable.$button-mobile-dark);
+
+    @media(min-width : 768px) {
+        display : none;
+    }
+
+    &-films{
+        margin-left : 2rem;
+    }
+}
+
+// .btn {
+//     @include mixin.button-style(variable.$button-background-light, variable.$background-color);
+
+//     &.bouton-play {
+//         background-color : variable.$button-background-light;
+//         color : variable.$background-color;
+//     }
+
+//     &.bouton-information {
+//         @include mixin.button-style(variable.$button-background-dark, variable.$text-color);
+//     }
+// }
 
 .couverture {
     position : relative;
@@ -130,11 +190,11 @@ a {
     &-mobile {
         display : flex;
         justify-content : center;
-        width : 100%;
+        width : 50%;
         margin-top : 5rem;
         border : 1px solid #ffffff;
+        border-radius : 16px;
         text-align : center;
-        padding : auto;
 
         @media (min-width : 768px) {
             display : none;
@@ -142,18 +202,9 @@ a {
     }
 
     &-film {
-        width : 50%;
+        width : 100%;
         border-radius : 16px;
-        padding : 1rem;
-    }
-}
-
-.border {
-    border : 1px solid #ffffff;
-    border-radius : 16px;
-
-    @media(max-width : 768px) {
-        border : none;
+        padding : 0rem;
     }
 }
 
@@ -189,7 +240,8 @@ a {
         position : static;
         transform : none;
         flex-direction : column;
-        align-items : flex-start;
+        align-items : center;
+        justify-content: center;
         width : 100%;
         margin : 0;
         padding : 1.5rem 0;
@@ -199,19 +251,6 @@ a {
 .actions {
     display : flex;
     gap : 1rem;
-
-    &-mobile {
-        display : flex;
-        gap : 1rem;
-
-        @media(min-width : 768px) {
-            display : none;
-        }
-    }
-
-    @media(max-width : 768px) {
-        display : none;
-    }
 }
 
 .btn {
@@ -325,6 +364,12 @@ h2 {
         transition : transform 0.3s ease-in-out;
         transform : scale(1.1);
         }
+}
+
+.fleche {
+    @media(max-width : 768px) {
+        display : none;
+    }
 }
 
 .defilement {
