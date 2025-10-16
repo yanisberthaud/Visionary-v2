@@ -46,6 +46,23 @@ a {
     }
 }
 
+.hover {
+    color : #ffffffb3;
+
+    @media(max-width : 768px) {
+        &:active {
+            color : variable.$secondary-color;
+        }
+    }
+
+    @media(min-width : 768px) {
+        &:hover {
+            color : variable.$secondary-color;
+            transition : color 0.2s;
+        }
+    }
+}
+
 .logo {
     margin-right : 3rem;
 
@@ -129,19 +146,6 @@ h1 {
         margin-left : 2rem;
     }
 }
-
-// .btn {
-//     @include mixin.button-style(variable.$button-background-light, variable.$background-color);
-
-//     &.bouton-play {
-//         background-color : variable.$button-background-light;
-//         color : variable.$background-color;
-//     }
-
-//     &.bouton-information {
-//         @include mixin.button-style(variable.$button-background-dark, variable.$text-color);
-//     }
-// }
 
 .couverture {
     position : relative;
@@ -388,4 +392,12 @@ h2 {
 
 .gap {
     margin-top : 3rem;
+}
+
+.carroussel {
+    margin-top : 2rem;
+
+    @media(max-width : 768px) {
+        margin-top : 3rem;
+    }
 }
