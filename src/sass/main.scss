@@ -255,6 +255,13 @@ h1 {
 .actions {
     display : flex;
     gap : 1rem;
+
+    &-details {
+        display : flex;
+        gap : 1rem;
+        margin-left : 3rem;
+        margin-top : 0.5rem;
+    }
 }
 
 .btn {
@@ -287,6 +294,23 @@ h1 {
 
     @media(max-width : 768px) {
         display : none;
+    }
+
+    &-details {
+        font-size : 1.5rem;
+        color : #ffb900;
+        display : flex;
+        align-items : center;
+        margin-left : 3rem;
+        margin-top : 0.5rem;
+
+        .half {
+            color : #ffb900;
+        }
+
+        .empty {
+            color : #555555;
+        }
     }
 }
 
@@ -400,4 +424,47 @@ h2 {
     @media(max-width : 768px) {
         margin-top : 3rem;
     }
+}
+
+.flexing {
+    display : flex;
+}
+.cover-details {
+    width : 70%;
+    height : auto;
+    margin-left : 3rem;
+
+    &-img {
+        width : 100%;
+        height : auto;
+        display : block;
+        border-radius : 16px;
+        margin : 3rem 0;
+    }
+}
+
+.film-title-details {
+    color : variable.$secondary-color;
+    font-size : 2.5rem;
+    font-weight : bold;
+    margin-top : 3rem;
+    margin-left : 3rem;    
+}
+
+.flex-column {
+    flex-direction : column;
+}
+
+.description-details {
+    margin-top : 0.5rem;
+    margin-left : 3rem;
+    font-size : 1.1rem;
+}
+
+.write-green {
+    color : variable.$primary-color;
+    font-size : 1.1rem;
+    font-weight : 500;
+    margin-left : 3rem;
+    margin-top : 3rem;
 }
