@@ -261,6 +261,11 @@ h1 {
         gap : 1rem;
         margin-left : 3rem;
         margin-top : 0.5rem;
+
+        @media(max-width: 768px) {
+            justify-content : center;
+            margin : 2rem 1rem;
+        }
     }
 }
 
@@ -310,6 +315,10 @@ h1 {
 
         .empty {
             color : #555555;
+        }
+
+        @media(max-width: 768px) {
+            margin : 0rem 1rem 1rem 1rem;
         }
     }
 }
@@ -428,11 +437,21 @@ h2 {
 
 .flexing {
     display : flex;
+    margin-left : 3rem;
+
+    @media(max-width : 768px) {
+        display : block;
+        margin-left : 0;
+    }
 }
+
+
 .cover-details {
     width : 70%;
     height : auto;
-    margin-left : 3rem;
+    margin : auto;
+    display : flex;
+    justify-content : center;
 
     &-img {
         width : 100%;
@@ -440,6 +459,20 @@ h2 {
         display : block;
         border-radius : 16px;
         margin : 3rem 0;
+
+        @media(max-width: 768px) {
+            margin : auto;
+        }
+    }
+
+    @media(max-width : 768px) {
+        display : flex;
+        justify-content : center;
+        width : 50%;
+        margin-top : 2rem;
+        border : 1px solid #ffffff;
+        border-radius : 16px;
+        text-align : center;
     }
 }
 
@@ -448,17 +481,32 @@ h2 {
     font-size : 2.5rem;
     font-weight : bold;
     margin-top : 3rem;
-    margin-left : 3rem;    
+    margin-left : 3rem;
+    
+    @media(max-width: 768px) {
+        text-align : center;
+        margin-bottom : 1rem;
+        margin-left : 0;
+    }
 }
 
 .flex-column {
     flex-direction : column;
+
+    @media(max-width: 768px) {
+        margin : 1rem; 
+    }
 }
 
 .description-details {
     margin-top : 0.5rem;
     margin-left : 3rem;
     font-size : 1.1rem;
+
+    @media(max-width: 768px) {
+        font-size : 0.8rem;
+        margin : 1rem;;
+    }
 }
 
 .write-green {
@@ -467,4 +515,8 @@ h2 {
     font-weight : 500;
     margin-left : 3rem;
     margin-top : 3rem;
+
+    @media(max-width: 768px) {
+        margin : 1rem;
+    }
 }
