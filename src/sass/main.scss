@@ -412,8 +412,7 @@ h2 {
 .defilement {
     display : flex;
     overflow-x : scroll;
-    overflow-y : hidden;
-    padding : 1.5rem 1.5rem;
+    overflow-y : hidden; ;
     
     &::-webkit-scrollbar {
         display : none;
