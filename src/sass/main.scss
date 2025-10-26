@@ -32,7 +32,7 @@ a {
     left : 0;
     z-index : 100;
 
-    background : rgba(0, 0, 0, 0);
+    background : variable.$background-color;
     backdrop-filter : blur(10px);
     -webkit-backdrop-filter : blur(10px);
 
@@ -41,21 +41,21 @@ a {
         align-items : center;
     }
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         padding : 1rem 1.5rem;
     }
 }
 
 .hover {
-    color : #ffffffb3;
+    color : variable.$hover;
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         &:active {
             color : variable.$secondary-color;
         }
     }
 
-    @media(min-width : 768px) {
+    @media(min-width : variable.$mobile) {
         &:hover {
             color : variable.$secondary-color;
             transition : color 0.2s;
@@ -72,12 +72,12 @@ a {
         display : block;
     }
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : none;
     }
 
     &-mobile {
-        @media(min-width : 768px) {
+        @media(min-width : variable.$mobile) {
             display : none;
         }
 
@@ -95,7 +95,7 @@ h1 {
     font-weight : 500;
     margin-left : 0.5rem;
 
-    @media(min-width : 768px) {
+    @media(min-width : variable.$mobile) {
         display : none;
     }
 }
@@ -106,14 +106,14 @@ h1 {
     font-size : 1rem;
 
     a {
-        color : #ffffffb3;
+        color : variable.$hover;
         font-weight : 500;
 
         &:hover {
             color : variable.$text-color;
         }
 
-        &.active {
+        &:focus {
             color : variable.$text-color;
             background-color : variable.$primary-color;
             padding : 0.5rem 1rem;
@@ -122,7 +122,7 @@ h1 {
         }
     }
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : none;
     }
 }
@@ -138,7 +138,7 @@ h1 {
 .bouton {
     @include mixin.button-style-mobile(variable.$button-mobile-light, variable.$button-mobile-dark);
 
-    @media(min-width : 768px) {
+    @media(min-width : variable.$mobile) {
         display : none;
     }
 
@@ -166,7 +166,7 @@ h1 {
         background : linear-gradient(77deg, #00000099) 0, transparent 85%;
     }
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         background-image : none;
         height : auto;
         width : auto;
@@ -184,7 +184,7 @@ h1 {
     transform : transalteY(-50%);
     width : 35%;
 
-    @media (max-width : 768px){
+    @media (max-width : variable.$mobile){
         width : 100%;
         position : static;
         display : flex;
@@ -196,11 +196,11 @@ h1 {
         justify-content : center;
         width : 50%;
         margin-top : 5rem;
-        border : 1px solid #ffffff;
+        border : 1px solid variable.$secondary-color;
         border-radius : 16px;
         text-align : center;
 
-        @media (min-width : 768px) {
+        @media (min-width : variable.$mobile) {
             display : none;
         }
     }
@@ -217,7 +217,7 @@ h1 {
     font-weight : bold;
     margin-bottom : 0.5rem;
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : none;
     }
 }
@@ -226,7 +226,7 @@ h1 {
     font-size : 0.8rem;
     margin-bottom : 2rem;
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : none;
     }
 }
@@ -240,7 +240,7 @@ h1 {
     align-items : center;
     width : 90%;
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         position : static;
         transform : none;
         flex-direction : column;
@@ -262,7 +262,7 @@ h1 {
         margin-left : 3rem;
         margin-top : 0.5rem;
 
-        @media(max-width: 768px) {
+        @media(max-width: variable.$mobile) {
             justify-content : center;
             margin : 2rem 1rem;
         }
@@ -284,40 +284,40 @@ h1 {
 
 .rating {
     font-size : 1.5rem;
-    color : #ffb900;
+    color : variable.$star-color;
     display : flex;
     align-items : center;
     margin-left : auto;
 
     .half {
-        color : #ffb900;
+        color : variable.$star-color;
     }
 
     .empty {
-        color : #555555;
+        color : variable.$star-empty;
     }
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : none;
     }
 
     &-details {
         font-size : 1.5rem;
-        color : #ffb900;
+        color : variable.$star-color;
         display : flex;
         align-items : center;
         margin-left : 3rem;
         margin-top : 0.5rem;
 
         .half {
-            color : #ffb900;
+            color : variable.$star-color;
         }
 
         .empty {
-            color : #555555;
+            color : variable.$star-empty;
         }
 
-        @media(max-width: 768px) {
+        @media(max-width: variable.$mobile) {
             margin : 0rem 1rem 1rem 1rem;
         }
     }
@@ -330,7 +330,7 @@ h1 {
     gap : 1.5rem;
     padding : 3rem;
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : none;
     }
 }
@@ -404,7 +404,7 @@ h2 {
 }
 
 .fleche {
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : none;
     }
 }
@@ -429,7 +429,7 @@ h2 {
 .carroussel {
     margin-top : 2rem;
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         margin-top : 3rem;
     }
 }
@@ -438,7 +438,7 @@ h2 {
     display : flex;
     margin-left : 3rem;
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : block;
         margin-left : 0;
     }
@@ -459,17 +459,17 @@ h2 {
         border-radius : 16px;
         margin : 3rem 0;
 
-        @media(max-width: 768px) {
+        @media(max-width: variable.$mobile) {
             margin : auto;
         }
     }
 
-    @media(max-width : 768px) {
+    @media(max-width : variable.$mobile) {
         display : flex;
         justify-content : center;
         width : 50%;
         margin-top : 2rem;
-        border : 1px solid #ffffff;
+        border : 1px solid variable.$secondary-color;
         border-radius : 16px;
         text-align : center;
     }
@@ -482,7 +482,7 @@ h2 {
     margin-top : 3rem;
     margin-left : 3rem;
     
-    @media(max-width: 768px) {
+    @media(max-width: variable.$mobile) {
         text-align : center;
         margin-bottom : 1rem;
         margin-left : 0;
@@ -492,7 +492,7 @@ h2 {
 .flex-column {
     flex-direction : column;
 
-    @media(max-width: 768px) {
+    @media(max-width: variable.$mobile) {
         margin : 1rem; 
     }
 }
@@ -502,7 +502,7 @@ h2 {
     margin-left : 3rem;
     font-size : 1.1rem;
 
-    @media(max-width: 768px) {
+    @media(max-width: variable.$mobile) {
         font-size : 0.8rem;
         margin : 1rem;;
     }
@@ -515,7 +515,51 @@ h2 {
     margin-left : 3rem;
     margin-top : 3rem;
 
-    @media(max-width: 768px) {
+    @media(max-width: variable.$mobile) {
         margin : 1rem;
     }
+}
+
+ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    color: #666;
+ 
+    &:not(:last-child)::after {
+      content: "›";
+      margin-left: 0.5rem;
+      color: #999;
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: variable.$primary-color;
+      text-decoration: none;
+      transition: color 0.2s;
+ 
+      &:hover {
+        color: darken(variable.$primary-color, 15%);
+        text-decoration: underline;
+      }
+
+      &[aria-current="page"] {
+      color: variable.$secondary-color;
+      font-weight: 600;
+    }
+  }
+}
+
+.ariane {
+    margin-top : 2rem;
+    margin-left : 3rem;
 }
