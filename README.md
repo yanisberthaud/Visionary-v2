@@ -97,9 +97,11 @@ index.html
 
 pages regroupant les films :
 pages/films/films.html 
+Cette page n'est pas encore opérationnel, tout comme les liens vers les films présent sur cette page.
 
 pages regroupant les series : 
 pages/series/series.html
+Cette page n'est pas encore opérationnel, tout comme les liens vers les séries présent sur cette page.
 
 pages details de chaque films : 
 pages/films/details/accueil/blade_runner_2049.html - blade_runner
@@ -197,3 +199,9 @@ pages/series/details/us/the_last_of_us.html
 pages/series/details/us/the_mandalorian.html
 pages/series/details/us/the_walking_dead.html
 pages/series/details/us/true_detective.html
+
+
+Choix pour l'affichage des éléments : 
+Dans ce projet, nous avons choisi d'utiliser plusieurs pages HTML afin de se déplacer et naviguer dans les différentes pages du site. 
+
+Capture d'écran du projet à retrouver dans le dossier public -> capture 
